@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  <script src="gesture-detector.js"></script>
-  <script src="gesture-handler.js"></script>
-</head>
-<body>
-  <a-scene
-    arjs
-    embedded
-    renderer="logarithmicDepthBuffer: true;"
-    vr-mode-ui="enabled: false"
-    gesture-detector
-    id="scene"
-  >
-    <a-marker
-      preset="hiro"
-      raycaster="objects: .clickable"
-      emitevents="true"
-      cursor="fuse: false; rayOrigin: mouse;"
-      id="markerA"
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="gesture-detector.js"></script>
+    <script src="gesture-handler.js"></script>
+  </head>
+  <body>
+    <a-scene
+      arjs
+      embedded
+      renderer="logarithmicDepthBuffer: true;"
+      vr-mode-ui="enabled: false"
+      gesture-detector
+      id="scene"
     >
-    <a-plane
-    id="plane1"
-    width="1"
-    height="1"
-    position="0 0 0"
-    rotation="-90 0 0"
-    material="src: #video1"
-    class="clickable"
-    gesture-handler
-  ></a-plane>
-  <video id="video1" src="1_sekou.mp4"></video>
-    </a-marker>
-    <a-entity camera></a-entity>
-  </a-scene>
-</body>
+      <a-marker
+        preset="hiro"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerA"
+      >
+        <a-plane
+          id="plane1"
+          width="1"
+          height="1"
+          position="0 0 0"
+          rotation="-90 0 0"
+          material="src: #video1"
+          class="clickable"
+          gesture-handler
+        ></a-plane>
+        <video id="video1" src="1_sekou.mp4"></video>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
 </html>
